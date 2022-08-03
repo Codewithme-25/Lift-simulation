@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="http://fonts.cdnfonts.com/css/fredoka-one" rel="stylesheet" />
+<link rel="stylesheet" href="../public/style.css" />
+<link rel="icon" type="image/x-icon" href="/src/img/favicon.ico" />
+<title>Lift Simulation</title>
+</head>
+<body>
+<header class="header">
+<h1 class="header__heading">Lift Simulation</h1>
+</header>
+<section class="main-control">
+<h3 class="control-input"></h3>
+<form action="" method="post" class="input_form" id="form">
+<div class="floor-input">
+<label for="floors">Number of Floors : </label>
+<input
+type="number"
+min="1"
+max="10"
+name="floors"
+value="1"
+id="input-floors"
+/>
+</div>
+<div class="lift-input">
+<label for="lifts">Number of Lifts : </label>
+<input
+type="number"
+min="1"
+max="5"
+name="lifts"
+value="1"
+id="input-lifts"
+/>
+</div>
+<button id="input-btn" class="generate_button">Generate</button>
+</form>
+</section>
+<hr class="floor-line" />
+<div class="container" id="main-container"></div>
+<hr class="floor-line" />
+<footer class="footer">
+<p class="footer_info">
+Link for the GitHub Repository:
+<a class="link" href="https://github.com/rohan09-raj/lift-simulation" target="_blank" rel="noopener noreferrer">Source Code</a
+>
+</p>
+</footer>
+</body>
+<script src="../public/main.js"></script>
+</html>

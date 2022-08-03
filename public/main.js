@@ -45,10 +45,8 @@ new_div.id = "floor" + floor_number ;
 
 let new_up_btn = document.createElement("button");
 let up_text = document.createTextNode("Up");
-// up_text.src = "./img/up-arrow-icon.png";
 let new_down_btn = document.createElement("button");
 let down_text = document.createTextNode("Down");
-// down_text.src = "./img/down-arrow-icon.png";
 let new_br = document.createElement("br");
 let new_hr = document.createElement("hr");
 let new_span = document.createElement("span");
@@ -59,8 +57,6 @@ new_hr.className = "hr";
 new_hr.id = "hr" + floor_number;
 new_up_btn.classList.add("control-btn", "control-btn--up");
 new_down_btn.classList.add("control-btn", "control-btn--down");
-// up_text.classList.add("arrow-icon");
-// down_text.classList.add("arrow-icon");
 
 new_up_btn.appendChild(up_text);
 new_up_btn.id = "up" + floor_number;
@@ -72,7 +68,6 @@ new_div.appendChild(new_br);
 new_div.appendChild(new_down_btn);
 new_div.appendChild(new_span);
 new_div.appendChild(new_hr);
-
 container.insertBefore(new_div, container.childNodes[0]);
 }
 
@@ -101,7 +96,6 @@ lft.moving = false;
 
 function doorAnimation(e) {
 let target_id = e.target.id;
-// NOTE :- BAD ASSUMPTION , MAX LIFTS = 9
 let lift_no = target_id[target_id.length - 1];
 let lift = document.getElementById("l" + lift_no);
 lift.removeEventListener("webkitTransitionEnd", doorAnimation);
@@ -221,7 +215,6 @@ lifts = [];
 make_floors();
 make_lifts();
 place_lifts();
-// set up buttons to listen for click event
 getButtons();
 intervalId = setInterval(check_for_scheduling, 100);
 }

@@ -146,14 +146,14 @@
     position: absolute;
     left: 15%;
     bottom: 1%;
-    background-color: white;
+    background-color: #F6F6F6;
     overflow : hidden;
     border-radius : 8px;
     border:2px   #CFD2CF ;
     }
     
     .lift_door {
-    background-color: #F6F6F6;
+    background-color: #CFD2CF;
     width: 50%;
     height: 100%;
     position: relative;

@@ -114,12 +114,6 @@
     background-color: #1C3879;
     }
     
-    .arrow-icon {
-    margin: 10px 5px 5px;
-    width: 30px;
-    height: 30px;
-    }
-    
     .floor {
     height: 20%;
     position: relative;
@@ -159,7 +153,7 @@
     }
     
     .lift_door {
-    background-color: #CFD2CF;
+    background-color: #F6F6F6;
     width: 50%;
     height: 100%;
     position: relative;

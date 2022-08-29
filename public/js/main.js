@@ -222,3 +222,20 @@ intervalId = setInterval(check_for_scheduling, 100);
 let input_btn = document.getElementById("input-btn");
 input_btn.addEventListener("click", start);
 
+function checkAlreadyAvailableLiftInThatFloor(id) {
+	for (let i = 0; i < liftDetails.length; i++) {
+		if (liftDetails[i].floorNo === id && !liftDetails[i].busyStatus) {
+			liftDetails[i].busyStatus = true;
+			queue.splice(0, 1);
+			setTimeout(() => {
+				liftDetails[i].busyStatus = false;
+				resetActiveButtonColor(id);
+				if (queue.length > 0) {
+					handleQueueRequests(queue[0]);
+				}
+			}, 3000);
+			return [liftDetails[i].liftId, 0];
+		}
+	}
+	return null;
+}
